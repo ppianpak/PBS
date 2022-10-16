@@ -23,7 +23,7 @@ public:
 	PBSNode* dummy_start = nullptr;
     PBSNode* goal_node = nullptr;
 
-
+  vector<Path*> paths;
 
 	bool solution_found = false;
 	int solution_cost = -2;
@@ -68,7 +68,6 @@ private:
 	int num_of_agents;
 
 
-	vector<Path*> paths;
 	vector < SingleAgentSolver* > search_engines;  // used to find (single) agents' paths and mdd
 
     bool generateChild(int child_id, PBSNode* parent, int low, int high);
