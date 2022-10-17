@@ -1,3 +1,7 @@
+*.idea
 cmake*
-.idea
+CMake*
+Makefile
 *.csv
+paths.txt
+pbs
