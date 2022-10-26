@@ -66,7 +66,7 @@ Path SIPP::findOptimalPath(const set<int>& higher_agents, const vector<Path*>& p
 
         // check if the popped node is a goal node
         if ((goal_location < 0 and // non-goal agent
-                instance.avoid_locations.count(curr->location) == 0 and // not on the prohibited locations
+                instance.avoid_locations.find(curr->location) == instance.avoid_locations.end() and // not on the prohibited locations
                 curr->timestep >= constraint_table.getHoldingTime(curr->location, constraint_table.length_min)) or // can stay at this location without collisions
             (goal_location >= 0 and  //goal agent
                 curr->location == goal_location && // arrive at the goal location

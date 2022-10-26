@@ -13,7 +13,7 @@ public:
 	int num_of_agents;
 	vector<int> start_locations;
 	vector<int> goal_locations;
-	set<int> avoid_locations; // agents without goal locations cannot end their paths with these locations
+	unordered_set<int> avoid_locations; // agents without goal locations cannot end their paths with these locations
 
 	// enum valid_moves_t { NORTH, EAST, SOUTH, WEST, WAIT_MOVE, MOVE_COUNT };  // MOVE_COUNT is the enum's size
 
